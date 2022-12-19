@@ -85,7 +85,6 @@ max-width: 100%;
     border-radius: 5px;
     padding: 0 1.5rem;
     width: 100%;
-    margin-bottom: 20px;
     height: 50px;  
 }
 
@@ -120,7 +119,40 @@ button{
     text-decoration: none;
     color: var(--Red);
 }
+.input-control{
+    margin-bottom: 20px;   
+    position: relative;
+}
 
+.input-control.error input {
+    border-color: var(--Red);
+}
+
+.input-control .innericon {
+    display: none;
+
+}
+.input-control .innericon.active {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    z-index: 5;
+    text-align: center;
+    pointer-events: none;
+}
+
+.innericon:before {
+   content: url("./images/icon-error.svg"); 
+}
+
+.input-control .error {
+    color: var(--Red);
+    font-size: 9px;
+    height: 13px;
+    
+}
+.error {text-align: end;}
 
 
 @media screen and (max-width: 1024px) {
